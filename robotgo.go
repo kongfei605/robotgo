@@ -35,6 +35,7 @@ package robotgo
 	// #cgo linux LDFLAGS: -lX11-xcb -lxcb -lxcb-xkb -lxkbcommon -lxkbcommon-x11
 //#endif
 	// #cgo windows LDFLAGS: -lgdi32 -luser32 -lpng -lz
+	#cgo windows CFLAGS: -I${SRCDIR}/cdeps/win64
 	#cgo windows LDFLAGS: -lgdi32 -luser32
 	#cgo windows,amd64 LDFLAGS: -L${SRCDIR}/cdeps/win64 -lpng -lz
 	#cgo windows,386 LDFLAGS: -L${SRCDIR}/cdeps/win32 -lpng -lz
